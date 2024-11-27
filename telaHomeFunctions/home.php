@@ -8,6 +8,7 @@
         header('location: http://localhost\conexaoAutistaBeta-main\telaDeLogin\login.php');
     }
     $logado = $_SESSION['emailUsuario'];
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

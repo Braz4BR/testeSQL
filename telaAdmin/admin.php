@@ -1,13 +1,13 @@
 <?php
-      session_start();
-    include_once('C:\xampp\htdocs\conexaoAutistaBeta-main\config.php');  
+    session_start();
+    include_once('C:\xampp\htdocs\conexaoAutistaBeta-main\config.php');
       //print_r($_SESSION);
-      if((!isset($_SESSION['emailUsuario']) == true) and (!sset($_SESSION['senhaUsuario']) == true)){
-          unset($_SESSION['emailUsuario']);
-          unset($_SESSION['senhaUsuario']);
-          header('location: http://localhost\conexaoAutistaBeta-main\telaDeLogin\login.php');
-      }
-      $logado = $_SESSION['emailUsuario'];
+    if((!isset($_SESSION['emailUsuario']) == true) and (!sset($_SESSION['senhaUsuario']) == true)){
+        unset($_SESSION['emailUsuario']);
+        unset($_SESSION['senhaUsuario']);
+        header('location: http://localhost\conexaoAutistaBeta-main\telaDeLogin\login.php');
+    }
+    $logado = $_SESSION['emailUsuario'];
     
 
     $sql = "SELECT * FROM usuarios ORDER BY idUsuario DESC";
@@ -46,7 +46,7 @@
                         <a class='btnIcon' href='http://localhost/conexaoAutistaBeta-main/TelaDeEditarCadastro/edit.php?idUsuario=$userData[idUsuario]'> EDITAR</a>
                 </td>";
                 echo "<td>
-                        <a class='btnIcon' href='#'> DELETAR</a>
+                        <a class='btnIcon' href='http://localhost\conexaoAutistaBeta-main\sistemaSenhas\delete.php?idUsuario=$userData[idUsuario]'> DELETAR</a>
                 </td>";
                 echo "</tr>";
             }
